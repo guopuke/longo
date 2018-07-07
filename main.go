@@ -1,13 +1,13 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"fmt"
-	"net/http"
-	"longo/router"
-	"log"
-	"time"
 	"errors"
+	"fmt"
+	"github.com/gin-gonic/gin"
+	"github.com/guopuke/longo/router"
+	"log"
+	"net/http"
+	"time"
 )
 
 func main() {

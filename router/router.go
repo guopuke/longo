@@ -2,8 +2,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"longo/handler/sd"
-	"longo/router/middleware"
+	"github.com/guopuke/longo/handler/sd"
+	"github.com/guopuke/longo/router/middleware"
 )
 
 func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
