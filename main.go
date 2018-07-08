@@ -5,12 +5,25 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/guopuke/longo/router"
+	"github.com/spf13/pflag"
 	"log"
 	"net/http"
 	"time"
+	"github.com/guopuke/longo/config"
+)
+
+var (
+	cfg = pflag.StringP("config", "c", "", "Longo api server config file path.")
 )
 
 func main() {
+	pflag.Parse()
+
+	// init config
+	if err := config.Init(*cfg); err != nil {
+		panic(err)
+	}
+
 	// Create the Gin engine
 	g := gin.New()
 
