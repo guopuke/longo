@@ -2,14 +2,14 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/guopuke/longo/config"
 	"github.com/guopuke/longo/router"
 	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
 	"log"
 	"net/http"
 	"time"
-	"github.com/guopuke/longo/config"
 )
 
 var (
@@ -23,6 +23,9 @@ func main() {
 	if err := config.Init(*cfg); err != nil {
 		panic(err)
 	}
+
+	// Set gin mode.
+	gin.SetMode(viper.GetString("runmode"))
 
 	// Create the Gin engine
 	g := gin.New()
@@ -45,15 +48,15 @@ func main() {
 		log.Print("The router has been deployed successfully.")
 	}()
 
-	fmt.Printf("Start to lisenting the incoming requests on http address: %s\n", ":8080")
-	fmt.Printf(http.ListenAndServe(":8080", g).Error())
+	log.Printf("Start to lisenting the incoming requests on http address: %s", viper.GetString("addr"))
+	log.Printf(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
 
 // pingServer pings the http server to make sure the router is working.
 // 服务启动进行健康状态自检
 func pingServer() error {
-	for i := 0; i < 2; i++ {
-		resp, e := http.Get("http://localhost:8080" + "/sd/health")
+	for i := 0; i < viper.GetInt("max_ping_count"); i++ {
+		resp, e := http.Get(viper.GetString("url") + "/sd/health")
 		if e == nil && resp.StatusCode == http.StatusOK {
 			return nil
 		}
