@@ -58,6 +58,12 @@
 			"revisionTime": "2018-06-25T08:58:08Z"
 		},
 		{
+			"checksumSHA1": "W+IoIME5mgWjwU+dOlh3DZEZEN4=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "749ddf1598b47e3cd909414bda735fe790ef3d30",
+			"revisionTime": "2018-06-18T11:59:01Z"
+		},
+		{
 			"checksumSHA1": "JZV+pLo8Z/kIYExrZr1Zu9KSKyU=",
 			"path": "github.com/golang/protobuf/proto",
 			"revision": "9eb2c01ac278a5d89ce4b2be68fe4500955d8179",
@@ -132,6 +138,18 @@
 			"path": "github.com/hashicorp/hcl/json/token",
 			"revision": "15738813a09db5c8e5b60a19d67d3f9bd38da3a4",
 			"revisionTime": "2018-05-06T01:38:06Z"
+		},
+		{
+			"checksumSHA1": "Q5TUogWYWt1JtuJnfFLgFNvPrHs=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "0fd395ab37aefd2d50854f0556a4311dccc6f45a",
+			"revisionTime": "2018-06-25T05:07:53Z"
+		},
+		{
+			"checksumSHA1": "4eelJOSLZoDzLuaJvgilOBVNovU=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
 		},
 		{
 			"checksumSHA1": "43k7wJHq6oW+9ziVxEgxTqgCS2g=",
