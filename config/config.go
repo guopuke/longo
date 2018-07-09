@@ -2,8 +2,8 @@ package config
 
 import (
 	"github.com/fsnotify/fsnotify"
-	"github.com/spf13/viper"
 	"github.com/lexkong/log"
+	"github.com/spf13/viper"
 
 	"strings"
 )
