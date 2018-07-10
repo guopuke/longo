@@ -3,6 +3,7 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/guopuke/longo/handler/sd"
+	"github.com/guopuke/longo/handler/user"
 	"github.com/guopuke/longo/router/middleware"
 )
 
@@ -12,6 +13,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.Use(middleware.NoCache)
 	g.Use(middleware.Options)
 	g.Use(middleware.Secure)
+
+	u := g.Group("v1/user")
+	{
+		u.POST("", user.Create)
+	}
 
 	// The health check handlers
 	svcd := g.Group("/sd")
