@@ -25,6 +25,10 @@ func DeleteUser(id uint64) error {
 	return DB.Self.Delete(&user).Error
 }
 
+func (u *UserModel) Update() error {
+	return DB.Self.Save(u).Error
+}
+
 func (u *UserModel) Validate() error {
 	validate := validator.New()
 	return validate.Struct(u)
