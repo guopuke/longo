@@ -58,6 +58,24 @@
 			"revisionTime": "2018-06-25T08:58:08Z"
 		},
 		{
+			"checksumSHA1": "b4DmyMT9bicTRVJw1hJXHLhIH+0=",
+			"path": "github.com/go-playground/locales",
+			"revision": "f63010822830b6fe52288ee52d5a1151088ce039",
+			"revisionTime": "2018-03-23T16:04:04Z"
+		},
+		{
+			"checksumSHA1": "JgF260rC9YpWyY5WEljjimWLUXs=",
+			"path": "github.com/go-playground/locales/currency",
+			"revision": "f63010822830b6fe52288ee52d5a1151088ce039",
+			"revisionTime": "2018-03-23T16:04:04Z"
+		},
+		{
+			"checksumSHA1": "7QcjNTtW0Rc/5BPw1MPaQ6YNjso=",
+			"path": "github.com/go-playground/universal-translator",
+			"revision": "71201497bace774495daed26a3874fd339e0b538",
+			"revisionTime": "2017-03-27T19:17:03Z"
+		},
+		{
 			"checksumSHA1": "W+IoIME5mgWjwU+dOlh3DZEZEN4=",
 			"path": "github.com/go-sql-driver/mysql",
 			"revision": "749ddf1598b47e3cd909414bda735fe790ef3d30",
@@ -273,6 +291,18 @@
 			"revisionTime": "2018-06-28T10:27:55Z"
 		},
 		{
+			"checksumSHA1": "oCH3J96RWvO8W4xjix47PModpio=",
+			"path": "golang.org/x/crypto/bcrypt",
+			"revision": "a49355c7e3f8fe157a85be2f77e6e269a0f89602",
+			"revisionTime": "2018-06-20T09:14:27Z"
+		},
+		{
+			"checksumSHA1": "oVPHWesOmZ02vLq2fglGvf+AMgk=",
+			"path": "golang.org/x/crypto/blowfish",
+			"revision": "a49355c7e3f8fe157a85be2f77e6e269a0f89602",
+			"revisionTime": "2018-06-20T09:14:27Z"
+		},
+		{
 			"checksumSHA1": "4NsJa0C++kR8uYyMHdTwpyn98wI=",
 			"path": "golang.org/x/sys/unix",
 			"revision": "3c6ecd8f22c6f40fbeec94c000a069d7d87c7624",
@@ -297,10 +327,10 @@
 			"revisionTime": "2018-05-10T04:57:31Z"
 		},
 		{
-			"checksumSHA1": "P/k5ZGf0lEBgpKgkwy++F7K1PSg=",
-			"path": "gopkg.in/go-playground/validator.v8",
-			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
-			"revisionTime": "2017-07-30T05:02:35Z"
+			"checksumSHA1": "AbuKUV0gxECkRpjb2fmgo3DZYac=",
+			"path": "gopkg.in/go-playground/validator.v9",
+			"revision": "ab2a8a99087e827c9af87ed6777ba897348fb178",
+			"revisionTime": "2018-07-09T15:35:10Z"
 		},
 		{
 			"checksumSHA1": "ZSWoOPUNRr5+3dhkLK3C4cZAQPk=",
