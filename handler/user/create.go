@@ -1,18 +1,44 @@
 package user
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	. "github.com/guopuke/longo/handler"
+	"github.com/guopuke/longo/model"
 	"github.com/guopuke/longo/pkg/errno"
+	"github.com/guopuke/longo/util"
 	"github.com/lexkong/log"
+	"github.com/lexkong/log/lager"
 )
 
 // Create creates a new user account
 func Create(c *gin.Context) {
+	log.Info("User Create function called.", lager.Data{"X-Request-Id": util.GetReqID(c)})
 	var r CreateRequest
 	if err := c.Bind(&r); err != nil {
 		SendResponse(c, errno.ErrBind, nil)
+		return
+	}
+	u := model.UserModel{
+		Username: r.Username,
+		Password: r.Password,
+	}
+
+	// validate the data.
+	if err := u.Validate(); err != nil {
+		SendResponse(c, errno.ErrValidation, nil)
+		return
+	}
+
+	// Encrypt the user password.
+	if err := u.Encrypt(); err != nil {
+		SendResponse(c, errno.ErrEncrypt, nil)
+		return
+	}
+
+	// Insert the user to the database.
+	if err := u.Create(); err != nil {
+		log.Infof("Database error: %s", err)
+		SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}
 
@@ -26,16 +52,6 @@ func Create(c *gin.Context) {
 	log.Infof("Header Content-Type: %s", contentType)
 
 	log.Debugf("username is : [%s], password is [%s]", r.Username, r.Password)
-
-	if r.Username == "" {
-		SendResponse(c, errno.New(errno.ErrUserNotFound, fmt.Errorf("username can not found in db: xx.xx.xx.xx")), nil)
-		return
-	}
-
-	if r.Password == "" {
-		SendResponse(c, fmt.Errorf("password is empty"), nil)
-		return
-	}
 
 	rsp := CreateResponse{Username: r.Username}
 
