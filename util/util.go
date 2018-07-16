@@ -2,6 +2,7 @@ package util
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/teris-io/shortid"
 )
 
 func GetReqID(c *gin.Context) string {
@@ -13,4 +14,8 @@ func GetReqID(c *gin.Context) string {
 		return requestId
 	}
 	return ""
+}
+
+func GetShortId() (string, error) {
+	return shortid.Generate()
 }
