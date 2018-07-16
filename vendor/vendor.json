@@ -285,6 +285,12 @@
 			"revisionTime": "2018-05-06T01:38:06Z"
 		},
 		{
+			"checksumSHA1": "ZQuUoNaE17SltnbJlqHhHizLbKU=",
+			"path": "github.com/teris-io/shortid",
+			"revision": "771a37caa5cf0c81f585d7b6df4dfc77e0615b5c",
+			"revisionTime": "2017-10-29T13:18:06Z"
+		},
+		{
 			"checksumSHA1": "d3YqGxTQPV3bo+sXijGmbpjf+WA=",
 			"path": "github.com/ugorji/go/codec",
 			"revision": "7d51bbe6161dcb8f32a1252c27668ce36e3ef16b",
