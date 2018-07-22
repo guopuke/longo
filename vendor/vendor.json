@@ -303,6 +303,12 @@
 			"revisionTime": "2018-06-28T10:27:55Z"
 		},
 		{
+			"checksumSHA1": "shTCYnhVnwNkeP2bpqb1FOIIyNA=",
+			"path": "github.com/willf/pad",
+			"revision": "b3d7806010228b1a954b4d9c4ee4cf6cb476b063",
+			"revisionTime": "2016-03-31T13:10:08Z"
+		},
+		{
 			"checksumSHA1": "oCH3J96RWvO8W4xjix47PModpio=",
 			"path": "golang.org/x/crypto/bcrypt",
 			"revision": "a49355c7e3f8fe157a85be2f77e6e269a0f89602",
