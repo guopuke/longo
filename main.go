@@ -42,6 +42,7 @@ func main() {
 
 		// Middlewares
 		middleware.RequestId(),
+		middleware.Logging(),
 	)
 
 	go func() {
