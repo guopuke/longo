@@ -16,7 +16,6 @@ var (
 	InternalServerError = &Errno{Code: 10001, Message: "Internal server error"}
 	ErrBind             = &Errno{Code: 10002, Message: "Error occurred while binding the request body to struct."}
 
-
 	ErrValidation = &Errno{Code: 20001, Message: "Validation failed."}
 	ErrDatabase   = &Errno{Code: 20001, Message: "Database error."}
 	ErrToken      = &Errno{Code: 20001, Message: "Error occurred while signing the JSON web token."}

@@ -1,10 +1,10 @@
 package model
 
 import (
-	"gopkg.in/go-playground/validator.v9"
+	"fmt"
 	"github.com/guopuke/longo/pkg/auth"
 	"github.com/guopuke/longo/pkg/constvar"
-	"fmt"
+	"gopkg.in/go-playground/validator.v9"
 )
 
 type UserModel struct {
@@ -50,6 +50,12 @@ func ListUser(username string, offset, limit int) ([]*UserModel, uint64, error) 
 	}
 
 	return users, count, nil
+}
+
+func GetUser(username string) (*UserModel, error) {
+	u := &UserModel{}
+	d := DB.Self.Where("username = ?", username).First(&u)
+	return u, d.Error
 }
 
 func (u *UserModel) Validate() error {
