@@ -13,8 +13,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.Use(middleware.NoCache)
 	g.Use(middleware.Options)
 	g.Use(middleware.Secure)
+	g.Use(mw...)
 
-	u := g.Group("v1/user")
+	g.POST("/login", user.Login) // 用户登录
+
+	u := g.Group("/v1/user")
 	{
 		u.POST("", user.Create)       // 创建用户
 		u.DELETE("/:id", user.Delete) // 删除用户
