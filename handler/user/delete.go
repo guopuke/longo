@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	. "github.com/guopuke/longo/handler"
 	"github.com/guopuke/longo/model"
-	"strconv"
 	"github.com/guopuke/longo/pkg/errno"
+	"strconv"
 )
 
 func Delete(c *gin.Context) {

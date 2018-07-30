@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	. "github.com/guopuke/longo/handler"
 	"github.com/guopuke/longo/model"
-	"github.com/guopuke/longo/pkg/errno"
 	"github.com/guopuke/longo/pkg/auth"
+	"github.com/guopuke/longo/pkg/errno"
 	"github.com/guopuke/longo/pkg/token"
 )
 
