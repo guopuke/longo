@@ -40,7 +40,6 @@ func ListUser(username string, offset, limit int) ([]*UserModel, uint64, error) 
 	var count uint64
 	where := fmt.Sprintf("username like '%%%s%%'", username)
 
-	fmt.Println(DB.Self.Model(&UserModel{}).Where(where).Count(&count))
 	if err := DB.Self.Model(&UserModel{}).Where(where).Count(&count).Error; err != nil {
 		return users, count, err
 	}

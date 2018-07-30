@@ -18,3 +18,8 @@
 
 .idea/
 *.log
+
+# TLS
+conf/server.crt
+conf/server.key
+
