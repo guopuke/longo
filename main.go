@@ -1,25 +1,42 @@
 package main
 
 import (
+	"encoding/json"
 	"errors"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/guopuke/longo/config"
 	"github.com/guopuke/longo/model"
+	v "github.com/guopuke/longo/pkg/version"
 	"github.com/guopuke/longo/router"
 	"github.com/guopuke/longo/router/middleware"
 	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"net/http"
+	"os"
 	"time"
 )
 
 var (
-	cfg = pflag.StringP("config", "c", "", "Longo api server config file path.")
+	cfg     = pflag.StringP("config", "c", "", "Longo api server config file path.")
+	version = pflag.BoolP("version", "v", false, "show version info.")
 )
 
 func main() {
 	pflag.Parse()
+
+	if *version {
+		vInfo := v.Get()
+
+		marshal, err := json.MarshalIndent(&vInfo, "", " ")
+		if err != nil {
+			fmt.Printf("%v\n", err)
+			os.Exit(1)
+		}
+		fmt.Println(string(marshal))
+		return
+	}
 
 	// init config
 	if err := config.Init(*cfg); err != nil {
