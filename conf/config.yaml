@@ -1,7 +1,7 @@
 runmode: debug                # 开发模式, debug, release, test
-addr: :6663                   # HTTP 绑定端口
+addr: :9999                   # HTTP 绑定端口
 name: longo                   # API Server name
-url: http://127.0.0.1:6663    # pingServer 函数请求的 API 服务器的 ip:port
+url: http://127.0.0.1:9999    # pingServer 函数请求的 API 服务器的 ip:port
 max_ping_count: 10            # pingServer 函数自检请求尝试次数
 jwt_secret: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 tls:
