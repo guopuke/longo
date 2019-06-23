@@ -2,9 +2,9 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/guopuke/longo/handler"
-	"github.com/guopuke/longo/pkg/errno"
-	"github.com/guopuke/longo/pkg/token"
+	"github.com/qingeekk/longo/handler"
+	"github.com/qingeekk/longo/pkg/errno"
+	"github.com/qingeekk/longo/pkg/token"
 )
 
 func AuthMiddleware() gin.HandlerFunc {

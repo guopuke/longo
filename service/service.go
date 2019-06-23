@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/guopuke/longo/model"
-	"github.com/guopuke/longo/util"
+	"github.com/qingeekk/longo/model"
+	"github.com/qingeekk/longo/util"
 )
 
 func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, error) {

@@ -2,7 +2,7 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/guopuke/longo/pkg/errno"
+	"github.com/qingeekk/longo/pkg/errno"
 	"net/http"
 )
 

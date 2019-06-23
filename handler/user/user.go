@@ -1,6 +1,6 @@
 package user
 
-import "github.com/guopuke/longo/model"
+import "github.com/qingeekk/longo/model"
 
 type CreateResponse struct {
 	Username string `json:"username"`

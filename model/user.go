@@ -2,8 +2,8 @@ package model
 
 import (
 	"fmt"
-	"github.com/guopuke/longo/pkg/auth"
-	"github.com/guopuke/longo/pkg/constvar"
+	"github.com/qingeekk/longo/pkg/auth"
+	"github.com/qingeekk/longo/pkg/constvar"
 	"gopkg.in/go-playground/validator.v9"
 )
 

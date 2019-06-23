@@ -2,10 +2,10 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	. "github.com/guopuke/longo/handler"
-	"github.com/guopuke/longo/model"
-	"github.com/guopuke/longo/pkg/errno"
-	"github.com/guopuke/longo/util"
+	. "github.com/qingeekk/longo/handler"
+	"github.com/qingeekk/longo/model"
+	"github.com/qingeekk/longo/pkg/errno"
+	"github.com/qingeekk/longo/util"
 	"github.com/lexkong/log"
 	"github.com/lexkong/log/lager"
 	"strconv"

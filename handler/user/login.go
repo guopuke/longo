@@ -2,11 +2,11 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	. "github.com/guopuke/longo/handler"
-	"github.com/guopuke/longo/model"
-	"github.com/guopuke/longo/pkg/auth"
-	"github.com/guopuke/longo/pkg/errno"
-	"github.com/guopuke/longo/pkg/token"
+	. "github.com/qingeekk/longo/handler"
+	"github.com/qingeekk/longo/model"
+	"github.com/qingeekk/longo/pkg/auth"
+	"github.com/qingeekk/longo/pkg/errno"
+	"github.com/qingeekk/longo/pkg/token"
 )
 
 // Login generates the authentication token
