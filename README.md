@@ -1,9 +1,11 @@
 # longo
 
-The RESTful API server of gin
+使用 Golang 语言 Gin 框架搭建的开箱即用 RESTful 基础 CRUD 模板 (The RESTful API server of gin)
 
-#### Directory Structure
-```
+
+#### 目录结构 (Directory Structure)
+
+```javascript
 ├── admin.sh                     # 进程的start|stop|status|restart控制文件
 ├── conf                         # 配置文件统一存放目录
 │   ├── config.yaml              # 配置文件
@@ -67,4 +69,33 @@ The RESTful API server of gin
     ├── golang.org
     ├── gopkg.in
     └── vendor.json
+```
+
+
+#### 包含如下第三方包 (3rd Part Packages):
+
+```
+gin-gonic/gin
+dgrijalva/jwt-go
+go-sql-driver/mysql
+StackExchange/wmi
+gin-contrib/sse
+go-ole/go-ole
+go-playground/locales
+go-playground/universal-translator
+golang/protobuf
+jinzhu/gorm
+jinzhu/inflection
+lexkong/log
+mattn/go-isatty
+satori/go.uuid
+shirou/gopsutil
+spf13/pflag
+spf13/viper
+teris-io/shortid
+ugorji/go
+willf/pad
+gopkg.in/check.v1
+gopkg.in/go-playground/validator.v9
+gopkg.in/yaml.v2
 ```
